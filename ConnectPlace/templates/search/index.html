@@ -1,0 +1,863 @@
+<!--
+@Ahmad @Al-ameen
+latin-ext
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>welcome to awesome search engine</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Awesome search engine" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+                        {% load static%}
+<link href="{% static 'css/bootstrap.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/menu.css' %}" rel="stylesheet" type="text/css" media="all" /> <!-- menu style -->
+<link href="{% static 'css/ken-burns.css' %}" rel="stylesheet" type="text/css" media="all" /> <!-- banner slider -->
+<link href="{% static 'css/animate.min.css' %}" rel="stylesheet" type="text/css" media="all" />
+<link href="{% static 'css/owl.carousel.css' %}" rel="stylesheet" type="text/css" media="all"> <!-- carousel slider -->
+<!-- //Custom Theme files -->
+<!-- font-awesome icons -->
+<link href="{% static 'css/font-awesome.css' %}" rel="stylesheet">
+<!-- //font-awesome icons -->
+<!-- js -->
+<script src="{% static 'js/jquery-2.2.3.min.js' %}"></script>
+<!-- //js -->
+<!-- web-fonts -->
+<link href="http://fonts.googleapis.com/css?family=Roboto+Condensed:400,300,300italic,400italic,700,700italic" rel='stylesheet' type='text/css'>
+<link href="http://fonts.googleapis.com/css?family=Lovers+Quarrel" rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Offside' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Tangerine:400,700' rel='stylesheet' type='text/css'>
+<!-- web-fonts -->
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+<script>
+$(document).ready(function() {
+	$("#owl-demo").owlCarousel({
+	  autoPlay: 3000, //Set AutoPlay to 3 seconds
+	  items :4,
+	  itemsDesktop : [640,5],
+	  itemsDesktopSmall : [480,2],
+	  navigation : true
+
+	});
+});
+</script>
+<script src="{% static 'js/jquery-scrolltofixed-min.js' %}" type="text/javascript"></script>
+<script>
+    $(document).ready(function() {
+        // This Dock the header to the top of the window when scrolled past the banner. This is the default behaviour.
+        $('.header-two').scrollToFixed();
+        // previous summary up the page.
+        var summaries = $('.summary');
+        summaries.each(function(i) {
+            var summary = $(summaries[i]);
+            var next = summaries[i + 1];
+            summary.scrollToFixed({
+                marginTop: $('.header-two').outerHeight(true) + 10,
+                zIndex: 999
+            });
+        });
+    });
+</script>
+<!-- //scroll to fixed-->
+<script type="text/javascript" src="{% static 'js/move-top.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/easing.js' %}"></script>
+<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+		});
+</script>
+<!-- //end-smooth-scrolling -->
+<!-- Script responsible for the "move to top" beneath the pages-->
+<script type="text/javascript">
+	$(document).ready(function() {
+		var defaults = {
+			containerID: 'toTop',
+			containerHoverID: 'toTopHover',
+			scrollSpeed: 1200,
+			easingType: 'linear'
+		};
+		$().UItoTop({ easingType: 'easeOutQuart' });
+	});
+</script>
+<!-- //smooth-scrolling-of-move-up -->
+<script src="{% static 'js/bootstrap.js' %}"></script>
+</head>
+<body>
+<!--The header navigation bar starts here-->
+<div class="header">
+	<div class="oloniyovictor-site-title-header">
+		<div class="oloniyovictor-site-title-header-left">
+			<p><a href="#">Bulk purchase | Store locator </a></p>
+		</div>
+		<div class="oloniyovictor-site-title-header-right">
+			<ul>
+				<li class="dropdown head-dpdn">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user" aria-hidden="true"></i> My Account<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="login.html">Login </a></li>
+						<li><a href="signup.html">Sign Up</a></li>
+					</ul>
+				</li>
+				<li class="dropdown head-dpdn">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-percent" aria-hidden="true"></i> Today's Deals<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="offers.html">Cash Back Offers</a></li>
+						<li><a href="offers.html">Product Discounts</a></li>
+						<li><a href="offers.html">Special Offers</a></li>
+					</ul>
+				</li>
+				<li class="dropdown head-dpdn">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-gift" aria-hidden="true"></i> Gift Cards<span class="caret"></span></a>
+					<ul class="dropdown-menu">
+						<li><a href="offers.html">Product Gift card</a></li>
+						<li><a href="offers.html">Occasions Register</a></li>
+						<li><a href="offers.html">View Balance</a></li>
+					</ul>
+				</li>
+				<li class="dropdown head-dpdn">
+					<a href="contact.html" class="dropdown-toggle"><i class="fa fa-map-marker" aria-hidden="true"></i> Store Finder</a>
+				</li>
+				<li class="dropdown head-dpdn">
+					<a href="help.html" class="dropdown-toggle"><i class="fa fa-question-circle" aria-hidden="true"></i> Help</a>
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+	<div class="header-two"><!-- Second header starts here -->
+		<div class="container">
+			<div class="header-logo">
+				<h1><a href="index.html"><span>C</span>onnect <i>place</i></a></h1>
+				<h6>Your stores. Your place.</h6>
+			</div>
+			<div class="header-search">
+				<form action="#" method="post">
+					<input type="search" name="Search" placeholder="Search a product, Category or brand" required="">
+					<button type="submit" class="btn btn-default" aria-label="Left Align">
+						<i class="" aria-hidden="true"> search</i>
+					</button>
+				</form>
+			</div>
+			<div class="header-cart">
+				<div class="my-account">
+					<a href="contact.html"><i class="fa fa-map-marker" aria-hidden="true"></i> CONTACT US</a>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div><!-- //Second header ends here -->
+	<div class="header-three"><!--This header contains the site navigation-->
+		<div class="container">
+			<div class="menu">
+				<div class="cd-dropdown-wrapper">
+					<a class="cd-dropdown-trigger" href="#0">Store Categories</a>
+					<nav class="cd-dropdown">
+						<a href="#0" class="cd-close">Close</a>
+						<ul class="cd-dropdown-content">
+							<li><a href="offers.html">Recommendation</a></li>
+							<li class="has-list">
+								<a href="#">All electronics</a>
+							</li>
+							<li class="has-list">
+								<a href="#">Lennovo store</a>
+							</li>
+							<li class="has-list">
+								<a href="#">Dell inspiron</a>
+							</li>
+							<li class="has-list">
+								<a href="#">Mac book pro</a>
+							</li>
+							<li><a href="sitemap.html">Full Site Directory </a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+	<!-- banner -->
+	<div class="banner">
+		<div id="kb" class="carousel kb_elastic animate_text kb_wrapper" data-ride="carousel" data-interval="6000" data-pause="hover">
+			<!-- Wrapper-for-Slides -->
+            <div class="carousel-inner" role="listbox">
+                <div class="item active"><!-- First-Slide -->
+                    <img src="images/.jpg" alt="" class="img-responsive" />
+                    <div class="carousel-caption kb_caption kb_caption_right">
+                        <h3 data-animation="animated flipInX">Flat <span>50%</span> Discount</h3>
+                        <h4 data-animation="animated flipInX">Hot Offer Today Only</h4>
+                    </div>
+                </div>
+                <div class="item"> <!-- Second-Slide -->
+                   <!-- <img src="images/3.jpg" alt="" class="img-responsive" />-->
+                    <div class="carousel-caption kb_caption kb_caption_right">
+                        <h3 class= "hid" data-animation="animated flipInX">Today sale</h3>
+                        <h4 data-animation="animated flipInX">Hot Offer Today Only</h4>
+                    </div>                </div>
+                <div class="item"><!-- Third-Slide -->
+                    <!--<img src="images/3.jpg" alt="" class="img-responsive"/> -->
+                    <div class="carousel-caption kb_caption kb_caption_right">
+                        <h3 class ="hid" data-animation="animated flipInX">End Of Sale</h3>
+                        <h4 data-animation="animated flipInX">proper preparation prevent poor</h4>
+                    </div>
+                </div>
+            </div>
+            <!-- Left-Button -->
+            <a class="left carousel-control kb_control_left" href="#" role="button" data-slide="prev">
+				<span class="fa fa-angle-left kb_icons" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <!-- Right-Button -->
+            <a class="right carousel-control kb_control_right" href="#" role="button" data-slide="next">
+                <span class="fa fa-angle-right kb_icons" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+		<script src="{% static 'js/custom.js' %}"></script>
+	</div>
+	<!-- //banner -->
+	<!-- welcome -->
+	<div class="welcome">
+		<div class="container">
+			<div class="welcome-info">
+				<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+					<ul id="myTab" class=" nav-tabs" role="tablist">
+						<li role="presentation" class="active"><a href="#home" id="home-tab" role="tab" data-toggle="tab" >
+							<i class="fa fa-laptop" aria-hidden="true"></i>
+							<h5>Electronics</h5>
+						</a></li>
+						<li role="presentation"><a href="#carl" role="tab" id="carl-tab" data-toggle="tab">
+							<i class="fa fa-female" aria-hidden="true"></i>
+							<h5>Electronics</h5>
+						</a></li>
+						<li role="presentation"><a href="#james" role="tab" id="james-tab" data-toggle="tab">
+							<i class="fa fa-gift" aria-hidden="true"></i>
+							<h5>Photo & Gifts</h5>
+						</a></li>
+						<li role="presentation"><a href="#decor" role="tab" id="decor-tab" data-toggle="tab">
+							<i class="fa fa-home" aria-hidden="true"></i>
+							<h5>Home Decor</h5>
+						</a></li>
+						<li role="presentation"><a href="#sports" role="tab" id="sports-tab" data-toggle="tab">
+							<i class="fa fa-motorcycle" aria-hidden="true"></i>
+							<h5>Sports</h5>
+						</a></li>
+					</ul>
+					<div class="clearfix"> </div>
+					<h3 class="oloniyovictor-site-title">Featured Products</h3>
+					<div id="myTabContent" class="tab-content">
+						<div role="tabpanel" class="tab-pane fade in active" id="home" aria-labelledby="home-tab">
+							<div class="tabcontent-grids">
+								<div id="owl-demo" class="owl-carousel">
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products.html"><img src="{% static 'images/laptop1.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">Audio speaker</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>Sale</h6></div>
+											<a href="products.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">Refrigerator</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products.html"><img src="{% static 'images/laptop4.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">Laptops</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+						P					<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">Digital laptops</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">Laptops</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>Sale</h6></div>
+											<a href="products.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">Laptops</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">Laptop</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="carl" aria-labelledby="carl-tab">
+							<div class="tabcontent-grids">
+								<script>
+									$(document).ready(function() {
+										$("#owl-demo1").owlCarousel({
+										  autoPlay: 3000, //Set AutoPlay to 3 seconds
+										  items :4,
+										  itemsDesktop : [640,5],
+										  itemsDesktopSmall : [414,4],
+										  navigation : true
+										});
+									});
+								</script>
+								<div id="owl-demo1" class="owl-carousel">
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>20% <br> Off</h6></div>
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">laptop</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">Laptops</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>20% <br> Off</h6></div>
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">Laptops</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products1.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products1.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="james" aria-labelledby="james-tab">
+							<div class="tabcontent-grids">
+								<script>
+									$(document).ready(function() {
+										$("#owl-demo2").owlCarousel({
+										  autoPlay: 3000, //Set AutoPlay to 3 seconds
+										  items :4,
+										  itemsDesktop : [640,5],
+										  itemsDesktopSmall : [414,4],
+										  navigation : true
+										});
+									});
+								</script>
+								<div id="owl-demo2" class="owl-carousel">
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptops</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>20% <br> Off</h6></div>
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>Sale</h6></div>
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptops</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptops</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>20% <br> Off</h6></div>
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>Sale</h6></div>
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products6.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products6.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="decor" aria-labelledby="decor-tab">
+							<div class="tabcontent-grids">
+								<script>
+									$(document).ready(function() {
+										$("#owl-demo3").owlCarousel({
+										  autoPlay: 3000, //Set AutoPlay to 3 seconds
+										  items :4,
+										  itemsDesktop : [640,5],
+										  itemsDesktopSmall : [414,4],
+										  navigation : true
+										});
+									});
+								</script>
+								<div id="owl-demo3" class="owl-carousel">
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>Sale</h6></div>
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>10%<br>Off</h6></div>
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>Sale</h6></div>
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>10%<br>Off</h6></div>
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">Plants & Vases</a></h4>
+												<p>Lorem ipsum dolor sit amet consectetur</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products3.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products3.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div role="tabpanel" class="tab-pane fade" id="sports" aria-labelledby="sports-tab">
+							<div class="tabcontent-grids">
+								<script>
+									$(document).ready(function() {
+										$("#owl-demo4").owlCarousel({
+										  autoPlay: 3000, //Set AutoPlay to 3 seconds
+										  items :4,
+										  itemsDesktop : [640,5],
+										  itemsDesktopSmall : [414,4],
+										  navigation : true
+										});
+									});
+								</script>
+								<div id="owl-demo4" class="owl-carousel">
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>20% <br>Off</h6></div>
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>New</h6></div>
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">Laptop</a></h4>
+												<p>Proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">laptop</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<div class="new-tag"><h6>20% <br>Off</h6></div>
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}"  alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">laptop</a></h4>
+												<p>proper preparation prevent poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+									<div class="item">
+										<div class="product-gallery-grids connect">
+											<a href="products4.html"><img src="{% static 'images/laptop2.jpg' %}" alt="img"></a>
+											<div class="view-caption connect-@connectplaces">
+												<h4><a href="products4.html">laptop</a></h4>
+												<p>proper preparation poor performance</p>
+												<h5>#2000</h5>
+								<a href="single.html" class="quick-view pquick-view"><i class="fa fa-eye" aria-hidden="true"></i>Quick view</a>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- //welcome -->
+		<!-- @roll back add new product starts here -->
+		<!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<div class="footer-info vee-connect-info">
+				<div class="col-md-4 address-left agileinfo">
+					<div class="footer-logo header-logo">
+						<h2><a href="index.html"><span>C</span>onnect <i>place</i></a></h2>
+						<h6></h6>
+					</div>
+					<ul>
+						<li><i class="fa fa-map-marker"></i> 11 Ade Bens, lagos state NIGERIA.</li>
+						<li><i class="fa fa-mobile"></i> +234 8097 012 219 </li>
+						<li><i class="fa fa-envelope-o"></i> <a href="mailto:example@mail.com"> mail@lateefahmad@programmer.net</a></li>
+					</ul>
+				</div>
+				<div class="col-md-8 address-right">
+					<div class="col-md-4 footer-grids">
+						<h3>Company</h3>
+						<ul>
+							<li><a href="about.html">About Us</a></li>
+							<li><a href="marketplace.html">Marketplace</a></li>
+							<li><a href="values.html">Core Values</a></li>
+							<li><a href="privacy.html">Privacy Policy</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 footer-grids">
+						<h3>Services</h3>
+						<ul>
+							<li><a href="contact.html">Contact Us</a></li>
+							<li><a href="login.html">Returns</a></li>
+							<li><a href="faq.html">FAQ</a></li>
+							<li><a href="sitemap.html">Site Map</a></li>
+						</ul>
+					</div>
+					<div class="col-md-4 footer-grids">
+						<h3>Mode of operations</h3>
+						<ul>
+							<li><i class="fa fa-laptop" aria-hidden="true"></i> Net Banking</li>
+							<li><i class="fa fa-money" aria-hidden="true"></i> Cash On Delivery</li>
+							<li><i class="fa fa-pie-chart" aria-hidden="true"></i>EMI Conversion</li>
+							<li><i class="fa fa-gift" aria-hidden="true"></i> E-Gift Voucher</li>
+							<li><i class="fa fa-credit-card" aria-hidden="true"></i> Debit/Credit Card</li>
+						</ul>
+					</div>
+					<div class="clearfix"></div>
+				</div>
+				<div class="clearfix"></div>
+			</div>
+		</div>
+	</div>
+	<!-- //footer -->
+	<div class="copy-right">
+		<div class="container">
+			<p>© 2018 Connect place . All rights reserved.</a></p>
+		</div>
+	</div>
+	<!-- countdown.js -->
+
+            {% load static %}
+	<script src="{% static 'js/jquery.knob.js' %}"></script>
+	<script src="{% static 'js/jquery.throttle.js' %}"></script>
+	<script src="{% static 'js/jquery.menu-aim.js' %}"> </script>
+	<script src="{% static 'js/main.js' %}"></script> <!--@ Resource jQuery -->
+</body>
+</html>

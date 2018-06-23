@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+               {% load static %}  <!--load files -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<link rel="stylesheet" href="{% static 'css/bootstrap.css' %}" media="screen">
+
+    {% block head %}
+    <title>base</title>
+    {% endblock %}
+</head>
+<body>
+
+{% block body %}
+
+{% endblock %}
+ {% load static%}  <!--load files -->
+<script src="{% static 'js/jquery.knob.js' %}"></script>
+
+<script src="{% static 'js/bootstrap.js' %}"></script>
+
+</body>
+
+</html>
